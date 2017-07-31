@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css?family=Oswald|Permanent+Marker");
+@-webkit-keyframes bounce {
+  0%, 50%, 100% {
+    -webkit-transform: translateY(0) rotateZ(-45deg);
+    transform: translateY(0) rotateZ(-45deg); }
+  25% {
+    -webkit-transform: translateY(3px) rotateZ(-45deg);
+    transform: translateY(3px) rotateZ(-45deg); }
+  75% {
+    -webkit-transform: translateY(-3px) rotateZ(-45deg);
+    transform: translateY(-3px) rotateZ(-45deg); } }
+@keyframes bounce {
+  0%, 50%, 100% {
+    -webkit-transform: translateY(0) rotateZ(-45deg);
+    transform: translateY(0) rotateZ(-45deg); }
+  25% {
+    -webkit-transform: translateY(3px) rotateZ(-45deg);
+    transform: translateY(3px) rotateZ(-45deg); }
+  75% {
+    -webkit-transform: translateY(-3px) rotateZ(-45deg);
+    transform: translateY(-3px) rotateZ(-45deg); } }
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+.clear-fix {
+  clear: both; }
+
+.container {
+  width: 90%;
+  margin: 0 auto; }
+
+nav {
+  float: right;
+  margin: .54em 0; }
+  nav ul {
+    margin: 0; }
+    nav ul li {
+      list-style: none;
+      display: inline-block; }
+    nav ul a {
+      margin-left: 2.4em;
+      text-decoration: none;
+      font-family: "Oswald", sans-serif;
+      color: #fff;
+      text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3); }
+
+/******************
+  HOME PAGE STYLES
+*******************/
+#home header {
+  height: 704px;
+  background: url("../images/tortola.jpg");
+  background-size: cover; }
+  #home header .title {
+    width: 72%;
+    margin: 0 auto;
+    padding: 9px;
+    position: relative;
+    top: 230px;
+    text-align: center; }
+    #home header .title h4, #home header .title h1 {
+      display: block;
+      font-family: "Permanent Marker", cursive;
+      color: #FC3A51;
+      letter-spacing: 12px;
+      text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3); }
+    #home header .title h1 {
+      border-bottom: 2px solid #FC3A51;
+      font-size: 6rem; }
+    #home header .title h4 {
+      margin-top: 18px;
+      font-size: 1.5rem; }
+    #home header .title .arrow {
+      margin: 9% 0 auto;
+      display: inline-block;
+      width: 54px;
+      height: 54px;
+      border-left: 3px solid #fc3a51;
+      border-bottom: 3px solid #fc3a51;
+      -webkit-animation: bounce 1.5s linear infinite;
+      animation: bounce 1.5s linear infinite; }
+
+#home .info-section {
+  margin: 12px auto;
+  text-align: center; }
+  #home .info-section .info-square {
+    display: inline-block;
+    width: 27%;
+    height: 200px;
+    margin: 0 3%;
+    text-align: center; }
+    #home .info-section .info-square .link-label {
+      margin-bottom: 12px;
+      font-family: "Oswald", sans-serif;
+      font-size: 1.5rem;
+      text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3); }
+      #home .info-section .info-square .link-label a {
+        text-decoration: none;
+        color: #0B8185; }
+    #home .info-section .info-square img {
+      width: 100%;
+      height: 100%;
+      border-radius: 12px;
+      box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3); }
+
+#home footer {
+  text-align: center;
+  background: #36BBA6;
+  margin-top: 18px; }
+  #home footer span, #home footer a {
+    color: #fff;
+    font-family: "Oswald", sans-serif;
+    letter-spacing: 3px; }
+  #home footer a {
+    text-decoration: none; }
+
+@media (max-width: 900px) {
+  #home header .title {
+    width: 90%; }
+  #home .info-section .info-square {
+    width: 68%;
+    height: 220px; } }
+
+@media (max-width: 700px) {
+  #home header .title {
+    width: 96%; } }
+
+@media (max-width: 550px) {
+  #home header {
+    height: 400px; }
+  #home header nav {
+    float: none;
+    margin: 0 auto;
+    text-align: center; }
+  #home header nav ul li a {
+    margin: 0 18%; }
+  #home header .title {
+    top: 100px; }
+  #home header .title h1 {
+    font-size: 4em; }
+  #home header .title .arrow {
+    display: none; } }
+
+@media (max-width: 450px) {
+  #home .info-section .info-square {
+    width: 90%; }
+  #home header {
+    height: 300px; }
+  #home header .title {
+    top: 75px; }
+  #home header .title h1 {
+    font-size: 3em; }
+  #home header .title h4 {
+    font-size: 1.2em; } }
+
+/*********************
+  HISTORY PAGE STYLES
+**********************/
+#history header {
+  height: 80px;
+  background: #36BBA6;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3); }
+  #history header .menu-title {
+    display: inline-block;
+    font-family: "Permanent Marker", cursive;
+    font-size: 1.5rem;
+    color: #FC3A51;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3); }
+
+#history .history-title h1 {
+  font-family: "Oswald", sans-serif; }
+
+#history .content {
+  margin: 24px 48px; }
+  #history .content p {
+    font-family: "Oswald", sans-serif; }

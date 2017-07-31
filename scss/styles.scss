@@ -1,0 +1,270 @@
+// IMPORTS
+@import url('https://fonts.googleapis.com/css?family=Oswald|Permanent+Marker');
+
+// DEFAULTS
+$defaultColor: #fff;
+$headerFont: 'Permanent Marker', cursive;
+$textFont: 'Oswald', sans-serif;
+$fontSize: 1rem;
+$shadow: 3px 3px 3px rgba(0,0,0,0.3);
+
+// ANIMATIONS
+@keyframes bounce {
+  0%,50%,100% {
+    transform: translateY(0) rotateZ(-45deg);
+  }
+
+  25% {
+    transform: translateY(3px) rotateZ(-45deg);
+  }
+
+  75% {
+    transform: translateY(-3px) rotateZ(-45deg);
+  }
+}
+
+// UNIVERSALS
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// CLEAR FIX
+.clear-fix {
+  clear: both;
+}
+
+// CONTAINER STYLE
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+// TOP MENU FOR ALL PAGES
+nav {
+  float: right;
+  margin: .54em 0;
+
+  ul {
+    margin: 0;
+
+    li {
+      list-style: none;
+      display: inline-block;
+    }
+    a {
+      margin-left: 2.4em;
+      text-decoration: none;
+      font-family: $textFont;
+      color: $defaultColor;
+      text-shadow: $shadow;
+    }
+  }
+}
+
+/******************
+  HOME PAGE STYLES
+*******************/
+
+#home {
+
+  //HEADER STYLE
+  header {
+    height: 704px;
+    background: url("../images/tortola.jpg");
+    background-size: cover;
+
+  //   HERO TITLE
+    .title {
+      width: 72%;
+      margin: 0 auto;
+      padding: 9px;
+      position: relative;
+      top: 230px;
+      text-align: center;
+
+
+      h4, h1 {
+        display: block;
+        font-family: $headerFont;
+        color: #FC3A51;
+        letter-spacing: 12px;
+        text-shadow: $shadow;
+      }
+
+      h1 {
+        border-bottom: 2px solid #FC3A51;
+        font-size: $fontSize * 6;
+      }
+
+      h4 {
+        margin-top: 18px;
+        font-size: $fontSize * 1.5;
+      }
+
+      .arrow {
+        margin: 9% 0 auto;
+        display: inline-block;
+        width: 54px;
+        height: 54px;
+        border-left: 3px solid #fc3a51;
+        border-bottom: 3px solid #fc3a51;
+        animation: bounce 1.5s linear infinite;
+
+      }
+    }
+  }
+
+  // Squares
+  .info-section {
+    margin: 12px auto;
+    text-align: center;
+
+    .info-square {
+      display: inline-block;
+      width: 27%;
+      height: 200px;
+      margin: 0 3%;
+      text-align: center;
+
+      .link-label {
+        margin-bottom: 12px;
+        font-family: $textFont;
+        font-size: $fontSize + .5;
+        text-shadow: $shadow;
+
+        a {
+          text-decoration: none;
+          color: #0B8185;
+        }
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 12px;
+        box-shadow: $shadow;
+      }
+    }
+  }
+
+  // FOOTER
+  footer {
+    text-align: center;
+    background: #36BBA6;
+    margin-top: 18px;
+
+    span, a {
+      color: #fff;
+      font-family: $textFont;
+      letter-spacing: 3px;
+    }
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  // MEDIA QUERIES
+  @media (max-width: 900px) {
+    header .title {
+      width: 90%;
+    }
+
+    .info-section .info-square {
+      width: 68%;
+      height: 220px;
+    }
+  }
+
+  @media (max-width: 700px) {
+    header .title {
+      width: 96%;
+    }
+  }
+
+  @media (max-width: 550px) {
+    header {
+      height: 400px;
+    }
+
+    header nav {
+     float: none;
+     margin: 0 auto;
+     text-align: center;
+    }
+
+    header nav ul li a {
+      margin: 0 18%;
+    }
+
+    header .title {
+      top: 100px;
+    }
+
+    header .title h1 {
+      font-size: 4em;
+    }
+
+    header .title .arrow {
+      display: none;
+    }
+  }
+
+  @media (max-width: 450px) {
+    .info-section .info-square {
+      width: 90%;
+    }
+
+    header {
+      height: 300px;
+    }
+
+    header .title {
+      top: 75px;
+    }
+
+    header .title h1 {
+      font-size: 3em;
+    }
+
+    header .title h4 {
+      font-size: 1.2em;
+    }
+  }
+}
+
+
+/*********************
+  HISTORY PAGE STYLES
+**********************/
+#history {
+  header {
+    height: 80px;
+    background: #36BBA6;
+    box-shadow: $shadow;
+
+    .menu-title {
+      display: inline-block;
+      font-family: $headerFont;
+      font-size: $fontSize + .5;
+      color: #FC3A51;
+      text-shadow: $shadow;
+    }
+  }
+
+  .history-title {
+    h1 {
+      font-family: $textFont;
+    }
+  }
+
+  .content {
+    margin: 24px 48px;
+
+    p {
+      font-family: $textFont;
+    }
+  }
+}
